@@ -58,6 +58,7 @@
     <Compile Include="SecurityLoginLogPoco.cs" />
     <Compile Include="SecurityLoginPoco.cs" />
     <Compile Include="SecurityLoginRolePoco.cs" />
+    <Compile Include="SecurityRolePoco.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
