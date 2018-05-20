@@ -48,6 +48,7 @@
     <Compile Include="ApplicantSkillPoco.cs" />
     <Compile Include="ApplicantWorkHistoryPoco.cs" />
     <Compile Include="CompanyDescriptionPoco.cs" />
+    <Compile Include="CompanyJobDescriptionPoco.cs" />
     <Compile Include="CompanyJobEducationPoco.cs" />
     <Compile Include="CompanyJobPoco.cs" />
     <Compile Include="CompanyJobSkillPoco.cs" />
