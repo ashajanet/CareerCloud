@@ -55,6 +55,7 @@
     <Compile Include="CompanyLocationPoco.cs" />
     <Compile Include="CompanyProfilePoco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecurityLoginPoco.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
