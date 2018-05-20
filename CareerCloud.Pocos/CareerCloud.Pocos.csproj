@@ -53,6 +53,7 @@
     <Compile Include="CompanyJobPoco.cs" />
     <Compile Include="CompanyJobSkillPoco.cs" />
     <Compile Include="CompanyLocationPoco.cs" />
+    <Compile Include="CompanyProfilePoco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
