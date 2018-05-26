@@ -17,13 +17,13 @@ namespace CareerCloud.Pocos
         [Column("Country_Code")]
         public String CountryCode { get; set; }
         [Column("State_Province_Code")]
-        public String StateProvinceCode { get; set; }
+        public String Province { get; set; }
         [Column("Street_Address")]
-        public String StreetAddress { get; set; }
+        public String Street{ get; set; }
         [Column("City_Town")]
-        public String CityTown { get; set; }
+        public String City { get; set; }
         [Column("Zip_Postal_Code")]
-        public String ZipPostalCode { get; set; }
+        public String PostalCode { get; set; }
         [Column("Time_Stamp")]
         public Byte[] TimeStamp { get; set; }
     }

@@ -14,7 +14,7 @@ namespace CareerCloud.Pocos
         [Key]
         public Guid Id { get; set; }
         public Guid Company { get; set; }
-        public String LanguageID { get; set; }
+        public String LanguageId { get; set; }
         [Column("Company_Name")]
         public String CompanyName { get; set; }
         [Column("Company_Description")]

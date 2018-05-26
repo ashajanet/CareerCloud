@@ -12,7 +12,7 @@ namespace CareerCloud.Pocos
    public class ApplicantEducationPoco
     {
         [Key]
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
         public Guid Applicant { get; set; }
         public String Major { get; set; }
         [Column("Certificate_Diploma")]

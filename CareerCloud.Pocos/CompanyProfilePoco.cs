@@ -24,6 +24,6 @@ namespace CareerCloud.Pocos
         [Column("Company_Logo")]
         public Byte[] CompanyLogo { get; set; }
         [Column("Time_Stamp")]
-        public Byte[] TimpStamp { get; set; }
+        public Byte[] TimeStamp { get; set; }
     }
 }
