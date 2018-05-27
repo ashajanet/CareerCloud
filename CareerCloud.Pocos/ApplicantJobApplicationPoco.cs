@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace CareerCloud.Pocos
 {
     [Table("Applicant_Job_Applications")]
-    class ApplicantJobApplicationPoco
+    class ApplicantJobApplicationPoco: IPoco
 
     {
         [Key]
