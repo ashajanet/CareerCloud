@@ -14,7 +14,7 @@ namespace CareerCloud.ADODataAccessLayer
     {
         public void Add(params SecurityLoginsRolePoco[] items)
         {
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn)
             {
                 SqlCommand Cmd = new SqlCommand();
@@ -48,7 +48,7 @@ namespace CareerCloud.ADODataAccessLayer
         public IList<SecurityLoginsRolePoco> GetAll(params Expression<Func<SecurityLoginsRolePoco, object>>[] navigationProperties)
         {
             SecurityLoginsRolePoco[] pocos = new SecurityLoginsRolePoco[1000];
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn)
             {
                 SqlCommand Cmd = new SqlCommand();
@@ -90,7 +90,7 @@ namespace CareerCloud.ADODataAccessLayer
 
         public void Remove(params SecurityLoginsRolePoco[] items)
         {
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn)
             {
                 SqlCommand Cmd = new SqlCommand();
@@ -110,7 +110,7 @@ namespace CareerCloud.ADODataAccessLayer
 
         public void Update(params SecurityLoginsRolePoco[] items)
         {
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn)
             {
                 SqlCommand Cmd = new SqlCommand();

@@ -15,7 +15,7 @@ namespace CareerCloud.ADODataAccessLayer
     {
         public void Add(params ApplicantProfilePoco[] items)
         {
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn)
             {
 
@@ -56,7 +56,7 @@ namespace CareerCloud.ADODataAccessLayer
         public IList<ApplicantProfilePoco> GetAll(params Expression<Func<ApplicantProfilePoco, object>>[] navigationProperties)
         {
             ApplicantProfilePoco[] pocos = new ApplicantProfilePoco[1000];
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn) 
             {
                 SqlCommand Cmd = new SqlCommand();
@@ -106,7 +106,7 @@ namespace CareerCloud.ADODataAccessLayer
 
         public void Remove(params ApplicantProfilePoco[] items)
         {
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn)
             {
                 SqlCommand Cmd = new SqlCommand();
@@ -126,7 +126,7 @@ namespace CareerCloud.ADODataAccessLayer
 
         public void Update(params ApplicantProfilePoco[] items)
         {
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn)
             {
                 SqlCommand Cmd = new SqlCommand();

@@ -14,7 +14,7 @@ namespace CareerCloud.ADODataAccessLayer
     {
         public void Add(params SystemLanguageCodePoco[] items)
         {
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn)
             {
                 SqlCommand Cmd = new SqlCommand();
@@ -47,7 +47,7 @@ namespace CareerCloud.ADODataAccessLayer
         public IList<SystemLanguageCodePoco> GetAll(params Expression<Func<SystemLanguageCodePoco, object>>[] navigationProperties)
         {
             SystemLanguageCodePoco[] pocos = new SystemLanguageCodePoco[1000];
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn)
             {
                 SqlCommand Cmd = new SqlCommand();
@@ -89,7 +89,7 @@ namespace CareerCloud.ADODataAccessLayer
 
         public void Remove(params SystemLanguageCodePoco[] items)
         {
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn)
             {
                 SqlCommand Cmd = new SqlCommand();
@@ -109,7 +109,7 @@ namespace CareerCloud.ADODataAccessLayer
 
         public void Update(params SystemLanguageCodePoco[] items)
         {
-            SqlConnection Conn = new SqlConnection(ConnectionStr);
+            SqlConnection Conn = new SqlConnection(_ConnectionStr);
             using (Conn)
             {
                 SqlCommand Cmd = new SqlCommand();
