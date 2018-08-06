@@ -18,7 +18,9 @@ namespace CareerCloud.Pocos
         public String JobName { get; set; }
         [Column("Job_Descriptions")]
         public String JobDescriptions { get; set; }//Changed to Pulral form of Description
-        [Column("Time_Stamp")] 
+        [Column("Time_Stamp")]
+        [Timestamp]
         public Byte[] TimeStamp { get; set; }
+        public virtual CompanyJobPoco CompanyJob { get; set; }
     }
 }

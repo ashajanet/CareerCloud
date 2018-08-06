@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace CareerCloud.Pocos
 {
     [Table("Company_Jobs")]
-     public class CompanyJobPoco: IPoco
+    public class CompanyJobPoco : IPoco
     {
         [Key]
         public Guid Id { get; set; }
@@ -21,6 +21,12 @@ namespace CareerCloud.Pocos
         [Column("Is_Company_Hidden")]
         public Boolean IsCompanyHidden { get; set; }
         [Column("Time_Stamp")]
+        [Timestamp]
         public Byte[] TimeStamp { get; set; }
+        public virtual ICollection<ApplicantJobApplicationPoco> ApplicantJobApplication { get; set; }
+        public virtual ICollection<CompanyJobEducationPoco> CompanyJobEducation { get; set; }
+        public virtual ICollection<CompanyJobSkillPoco> CompanyJobSkill { get; set; }
+        public virtual CompanyProfilePoco CompanyProfiles { get; set; }
+        public virtual ICollection<CompanyJobDescriptionPoco> CompanyJobDescription{ get; set; }
     }
 }
