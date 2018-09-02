@@ -12,7 +12,7 @@ namespace CareerCloud.BusinessLogicLayer
         protected IDataRepository<SystemCountryCodePoco> _repository;
 
         public SystemCountryCodeLogic(IDataRepository<SystemCountryCodePoco> repository)
-        { _repository = repository; }
+        { _repository =  repository; }
 
         public SystemCountryCodePoco Get(string code)
         {

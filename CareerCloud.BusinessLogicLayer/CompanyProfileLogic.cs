@@ -25,22 +25,28 @@ namespace CareerCloud.BusinessLogicLayer
         }
         protected override void Verify(CompanyProfilePoco[] pocos)
         {
+            string inputDomain;
+           
             List<ValidationException> exceptions = new List<ValidationException>();
 
             foreach (CompanyProfilePoco poco in pocos)
             {
+                string[] validDomains = {
+                            ".ca",
+                            ".com",
+                            ".biz" };
 
+                inputDomain = poco.CompanyWebsite.Substring(poco.CompanyWebsite.LastIndexOf('.'));
 
                 if (string.IsNullOrEmpty(poco.CompanyWebsite))
                 {
                     exceptions.Add(new ValidationException(600, $"Valid websites must end with the following extensions – .ca, .com, .biz - {poco.Id} is not a valid email address format."));
                 }
-                else
-                if (
-                        poco.CompanyWebsite.Substring(poco.CompanyWebsite.LastIndexOf('.')) != "ca"
-                        || poco.CompanyWebsite.Substring(poco.CompanyWebsite.LastIndexOf('.'))  !=  "com" 
-                        || poco.CompanyWebsite.Substring(poco.CompanyWebsite.LastIndexOf('.'))  != "biz"
-                )
+                /*else if (                  substr != ".ca"
+                        && substr !=  ".com" 
+                        && substr != ".biz"
+                )*/
+                else if(validDomains.Contains(inputDomain) == false)
                 {
                   exceptions.Add(new ValidationException(600, $"Valid websites must end with the following extensions – .ca, .com, .biz - {poco.Id} is not a valid email address format."));
                 }
